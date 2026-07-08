@@ -48,10 +48,6 @@ COPY . .
 
 EXPOSE 8000
 
+# Change the CMD line to this:
+CMD ["python", "-m", "uvicorn", "gateway.main:app", "--host", "0.0.0.0", "--port", "10000"]
 
-
-# Command to run the application. 
-
-# Note: Adjust the module path based on where your main.py resides within gateway/
-
-CMD ["uvicorn", "gateway.main:app", "--host", "0.0.0.0", "--port", "8000"] 
